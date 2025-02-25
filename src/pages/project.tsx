@@ -1,5 +1,6 @@
-import React from 'react';
-import { ExternalLink, Github, Code2, Palette, Layout, Search, Filter } from 'lucide-react';
+import React, { useState } from 'react';
+import { ExternalLink, Github, Code2, Palette, Layout, Search } from 'lucide-react';
+import { MobilePreview } from '../components/MobilePreview';
 
     interface Project {
     title: string;
@@ -17,6 +18,8 @@ import { ExternalLink, Github, Code2, Palette, Layout, Search, Filter } from 'lu
     }
 
     export const Projects: React.FC = () => {
+    const [isMobilePreviewOpen, setIsMobilePreviewOpen] = useState(false);
+
     const projects: Project[] = [
         {
         title: 'Portfólio Profissional',
@@ -29,7 +32,7 @@ import { ExternalLink, Github, Code2, Palette, Layout, Search, Filter } from 'lu
             'Sistema de busca e filtros',
             'Navegação fluida entre páginas'
         ],
-        demoUrl: 'https://portfolio-demo.example.com',
+        demoUrl: '#',
         githubUrl: 'https://github.com/username/portfolio',
         implementation: [
             {
@@ -114,15 +117,13 @@ import { ExternalLink, Github, Code2, Palette, Layout, Search, Filter } from 'lu
                     </div>
 
                     <div className="mt-8 flex flex-wrap gap-4">
-                    <a
-                        href={project.demoUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                    <button
+                        onClick={() => setIsMobilePreviewOpen(true)}
                         className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-primary hover:bg-primary/90"
                     >
                         <ExternalLink className="w-4 h-4 mr-2" />
-                        Ver Demo Mobile
-                    </a>
+                        Ver Demo
+                    </button>
                     <a
                         href={project.githubUrl}
                         target="_blank"
@@ -138,6 +139,11 @@ import { ExternalLink, Github, Code2, Palette, Layout, Search, Filter } from 'lu
             ))}
             </div>
         </div>
+
+        <MobilePreview
+            isOpen={isMobilePreviewOpen}
+            onClose={() => setIsMobilePreviewOpen(false)}
+        />
         </div>
     );
     };
