@@ -131,7 +131,7 @@ import { MobilePreview } from '../components/MobilePreview';
                         className="inline-flex items-center px-4 py-2 border border-primary text-base font-medium rounded-md shadow-sm text-primary bg-transparent hover:bg-primary/10"
                     >
                         <Github className="w-4 h-4 mr-2" />
-                        Código Fonte
+                        <a href="https://github.com/gCoutog/Portifolio.git">Código Fonte</a>
                     </a>
                     </div>
                 </div>

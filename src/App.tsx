@@ -44,7 +44,7 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16">
             <div className="flex-shrink-0 flex items-center">
-              <Link to="/" className="text-xl font-bold text-primary">Couto.dev</Link>
+              <Link to="/" className="text-xl font-bold text-primary">João.dev</Link>
             </div>
             <div className="flex space-x-8">
               <Link to="/" className="inline-flex items-center px-1 pt-1 text-sm font-medium text-white">Home</Link>
@@ -189,7 +189,7 @@ function App() {
         <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
             <div className="col-span-2 md:col-span-1">
-              <h3 className="text-white text-lg font-bold">Couto.dev</h3>
+              <h3 className="text-white text-lg font-bold">João.dev</h3>
               <p className="mt-2 text-gray-400 text-sm">
                 Desenvolvedor Full Stack especializado em React e TypeScript
               </p>
@@ -220,7 +220,7 @@ function App() {
           </div>
           <div className="mt-8 border-t border-dark-900 pt-8">
             <p className="text-gray-400 text-sm text-center">
-              © 2025 Couto.dev. Todos os direitos reservados.
+              © 2025 João.dev. Todos os direitos reservados.
             </p>
           </div>
         </div>
@@ -230,3 +230,4 @@ function App() {
 }
 
 export default App;
+
